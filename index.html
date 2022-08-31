@@ -5,15 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Pokedex</h1>
+        <div class="maxWidth">
+            <span class="logo"></span>
+            <h1>Pokedex</h1>
+        </div>
     </header>
-    <main>
-        <section class="searching">
-            <div></div>
-            
+    <main class="maxWidth">
+        <section class="form">
+            <form>
+                <input type="text" id="search" placeholder="Type number or name of pokemon...">
+                <button type="button">🔍 search</button>
+            </form>
+        </section>
+        <section class="search">
+            <img src="#" alt="pokemon">
+            <div class="verticalLine"></div>
+            <div class="informations">
+                <div>
+                    <p>ID: </p>
+                    <p>Name: </p>
+                </div>
+                <p>Type: </p>
+                <p>description...</p>
+            </div>            
         </section>
         <section class="pokedex">
 

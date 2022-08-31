@@ -1,0 +1,114 @@
+@charset 'UTF-8'; 
+
+:root {
+    --redpokeball: #CE2211;
+    --orange: #D5A100;
+    --grayBG: #DFDFDF;
+    --blue: #0075BE;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+
+    background-color: var(--grayBG);
+}
+
+.maxWidth {
+    max-width: 800px;
+}
+
+header {
+    height: 100px;
+    background-color: #000;
+}
+
+header > div {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    color: #fff;
+}
+
+.logo {
+    width: 170px;
+    height: 100%;
+    background-image: url(../imgs/pokemon-logo.png);
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+main {
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
+
+    margin: auto;
+    padding: 50px 100px;
+    border-radius: 10px ;
+
+    background-color: #fff;
+}
+
+section {
+    width: 100%;
+}
+
+form {
+    width: 100%;
+    margin: 0 ;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+form input, form button {
+    height: 50px;
+    border-radius: 50px;
+    border: 3px solid var(--blue);
+}
+form input {
+    width: 300px;
+
+    text-indent: 1rem;
+}
+form button {
+    width: 100px;
+
+    background-color: var(--blue);
+
+    color: white;
+    text-transform: uppercase;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.search img{
+    width: 160px;
+    height: 160px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+.verticalLine {
+    border-left:1px solid; 
+    border-color: var(--redpokeball);
+    height:200px;
+}   
