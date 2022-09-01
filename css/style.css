@@ -93,6 +93,7 @@ form button {
 
     color: white;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .search {
@@ -111,4 +112,13 @@ form button {
     border-left:1px solid; 
     border-color: var(--redpokeball);
     height:200px;
-}   
+}
+
+.informations span{
+    text-transform: capitalize;
+}
+
+footer{
+    text-align: center;
+    font-size: 0.8rem;
+}
