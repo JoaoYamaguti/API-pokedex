@@ -5,12 +5,33 @@ form.addEventListener('submit', (e) => {
     let search = document.querySelector('#search').value
     fetch(`https://pokeapi.co/api/v2/pokemon/${search}/`).then(r => {return r.json()}).then(API => {
         console.log(API)
+        let answerImg = document.createElement('img')
+        answerImg.setAttribute('alt', `${API.nome}`)
+        answerImg.src = API.sprites.front_default
 
-        document.querySelector('#id').textContent = '#' + API.id
+        let sectionAnswer = document.querySelector('.answer')
+        sectionAnswer.innerHTML = ''
+        sectionAnswer.appendChild(answerImg)
         
-        document.querySelector('#name').textContent = API.name
+        let vertLine = document.createElement('div')
+        vertLine.classList.add('verticalLine')
+        sectionAnswer.appendChild(vertLine)
 
-        console.log(document.querySelector('#id'))
+        let div = document.createElement('div')
+
+        let pId = document.createElement('p')
+        pId.setAttribute('id', 'id')
+        pId.innerText = '#' + API.id
+        div.appendChild(pId)
+
+        let pName = document.createElement('p')
+        pName.setAttribute('id', 'id')
+        pName.innerText = API.name
+        div.appendChild(pName)
+        
+        sectionAnswer.appendChild(div)
+
+        let pType = document.createElement('p')
+        // continuar type
     })
-
 })

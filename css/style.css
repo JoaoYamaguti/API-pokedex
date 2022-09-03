@@ -96,17 +96,18 @@ form button {
     cursor: pointer;
 }
 
-.search {
+.answer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
 }
-.search img{
+.answer img, .img{
     width: 160px;
     height: 160px;
     border-radius: 15px;
     border: 1px solid black;
+    transform: scaleX(-1);
 }
 .verticalLine {
     border-left:1px solid; 
