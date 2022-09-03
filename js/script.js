@@ -5,33 +5,21 @@ form.addEventListener('submit', (e) => {
     let search = document.querySelector('#search').value
     fetch(`https://pokeapi.co/api/v2/pokemon/${search}/`).then(r => {return r.json()}).then(API => {
         console.log(API)
-        let answerImg = document.createElement('img')
-        answerImg.setAttribute('alt', `${API.nome}`)
-        answerImg.src = API.sprites.front_default
+        let answerImg = document.querySelector('.img')
+        answerImg.style.backgroundImage = `url(${API.sprites.front_default})`
 
-        let sectionAnswer = document.querySelector('.answer')
-        sectionAnswer.innerHTML = ''
-        sectionAnswer.appendChild(answerImg)
-        
-        let vertLine = document.createElement('div')
-        vertLine.classList.add('verticalLine')
-        sectionAnswer.appendChild(vertLine)
-
-        let div = document.createElement('div')
-
-        let pId = document.createElement('p')
-        pId.setAttribute('id', 'id')
+        let pId = document.querySelector('#id')
         pId.innerText = '#' + API.id
-        div.appendChild(pId)
 
-        let pName = document.createElement('p')
-        pName.setAttribute('id', 'id')
+        let pName = document.querySelector('#name')
         pName.innerText = API.name
-        div.appendChild(pName)
-        
-        sectionAnswer.appendChild(div)
 
-        let pType = document.createElement('p')
-        // continuar type
+        let pType = document.querySelector('#type')
+        pType.textContent = ""
+        API.types.forEach(element => {
+            let pokeType = element.type.name
+            pType.textContent += pokeType + ' '
+        });       
     })
 })
+

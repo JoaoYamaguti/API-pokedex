@@ -108,15 +108,46 @@ form button {
     border-radius: 15px;
     border: 1px solid black;
     transform: scaleX(-1);
-}
-.verticalLine {
-    border-left:1px solid; 
-    border-color: var(--redpokeball);
-    height:200px;
+    background-position: center center;
+    background-size: cover;
 }
 
-.informations span{
+.answer p {
+    padding-bottom: 10px;
+}
+.verticalLine {
+    border-left: 1px solid; 
+    border-color: var(--redpokeball);
+    height: 200px;
+}
+
+.capitalize{
     text-transform: capitalize;
+}
+
+.evolution ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.evolution li{
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid black;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.evolution .img {
+    width: 80px;
+    height: 80px;
 }
 
 footer{
