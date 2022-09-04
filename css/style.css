@@ -103,8 +103,8 @@ form button {
     gap: 1.5rem;
 }
 .answer img, .img{
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
     border-radius: 15px;
     border: 1px solid black;
     transform: scaleX(-1);
@@ -129,6 +129,7 @@ form button {
     list-style: none;
 
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
 }
