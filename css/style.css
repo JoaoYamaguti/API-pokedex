@@ -82,17 +82,18 @@ form input, form button {
     border-radius: 50px;
     border: 3px solid var(--blue);
 }
-form input {
+form input[type="text"] {
     width: 300px;
-
     text-indent: 1rem;
 }
-form button {
+form .button {
     flex: 0 0 100px;
     background-color: var(--blue);
 
     color: white;
     text-transform: uppercase;
+}
+form .button:enabled {
     cursor: pointer;
 }
 
@@ -155,6 +156,7 @@ form button {
 }
 
 footer{
+    height: 40px;
     text-align: center;
     font-size: 0.8rem;
 }
