@@ -1,5 +1,7 @@
-let form = document.querySelector('form')
+const form = document.querySelector('form')
 form.addEventListener('submit', async (e) => {
+    const formBtn = document.querySelector('button')
+    formBtn.disabled = true
     e.preventDefault()
 
     let listEvolv = document.querySelector('#listOfEvolv')
@@ -26,6 +28,8 @@ form.addEventListener('submit', async (e) => {
     const chain = Array(evolvChain.chain)
     
     evolvInfos(chain)
+
+    formBtn.disabled = false
 
     async function searchForPokemon (idSearch) {
         let resposta
