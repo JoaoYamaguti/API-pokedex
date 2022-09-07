@@ -29,7 +29,7 @@ form.addEventListener('submit', async (e) => {
     await evolvInfos(chain)
     }
     catch {
-        alert('pokemon Not Found :/ ')
+        alert('Pokemon Not Found :/ 404')
         formDisable(false)
         return
     }
