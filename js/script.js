@@ -6,9 +6,8 @@ form.addEventListener('submit', async (e) => {
     let listEvolv = document.querySelector('#listOfEvolv')
     listEvolv.innerHTML = ""
     
-    let search = document.querySelector('#search').value
+    let search = document.querySelector('#search').value.toLowerCase()
     let infos = await searchForPokemon(search)
-    
     let answerImg = document.querySelector('.img')
     answerImg.style.backgroundImage = `url(${infos.pokeUrl})`
 

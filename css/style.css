@@ -32,7 +32,7 @@ body {
 }
 
 .maxWidth {
-    max-width: 800px;
+    max-width: 700px;
     width: 93%;
 }
 
@@ -42,9 +42,10 @@ header {
 }
 
 header > div {
+    width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: auto;
     color: #fff;
@@ -84,9 +85,9 @@ form {
     width: 100%;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 form input {
     height: 50px;
@@ -95,12 +96,18 @@ form input {
 }
 form #search {
     width: 70%;
-    text-indent: 1rem;
+    text-indent: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.form_btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 form .button {
     width: 100px;
     background-color: var(--blue);
-
     color: white;
     text-transform: uppercase;
 }
