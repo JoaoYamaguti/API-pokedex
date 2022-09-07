@@ -7,6 +7,15 @@
     --blue: #0075BE;
 }
 
+@media(max-width: 425px) {
+    form, .answer {
+        flex-flow: column;
+    }
+    .verticalLine{
+       display: none;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -24,6 +33,7 @@ body {
 
 .maxWidth {
     max-width: 800px;
+    width: 93%;
 }
 
 header {
@@ -59,7 +69,7 @@ main {
     gap: 1.5rem;
 
     margin: auto;
-    padding: 50px 100px;
+    padding: 50px 5%;
     border-radius: 10px ;
 
     background-color: #fff;
@@ -72,22 +82,23 @@ section {
 
 form {
     width: 100%;
-    margin: 0 ;
+    margin: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1.5rem;
 }
-form input, form button {
+form input {
     height: 50px;
     border-radius: 50px;
     border: 3px solid var(--blue);
 }
-form input[type="text"] {
-    width: 300px;
+form #search {
+    width: 70%;
     text-indent: 1rem;
 }
 form .button {
-    flex: 0 0 100px;
+    width: 100px;
     background-color: var(--blue);
 
     color: white;
@@ -115,11 +126,16 @@ form .button:enabled {
 
 .answer p {
     padding-bottom: 10px;
+    width: 100%;
 }
 .verticalLine {
     border-left: 1px solid; 
     border-color: var(--redpokeball);
     height: 180px;
+}
+
+.informations {
+    text-align: center;
 }
 
 .capitalize{
@@ -151,8 +167,12 @@ form .button:enabled {
 }
 
 .evolution .img {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
+    transform: scaleX(-1);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
 }
 
 footer{
